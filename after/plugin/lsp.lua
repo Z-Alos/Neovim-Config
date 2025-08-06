@@ -45,6 +45,13 @@ lsp.on_attach(function(client, bufnr)
       return
   end
 
+  require("lsp_signature").on_attach({
+    bind = true,
+    floating_window = true,   -- popup mode
+    hint_enable = true,       -- tiny inline hints
+    handler_opts = { border = "rounded" }
+  }, bufnr)
+
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
   vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
   vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)

@@ -56,5 +56,7 @@ return require('packer').startup(function(use)
 		 {'rafamadriz/friendly-snippets'}, -- Optional
 	 }
  } 
+
+ use ('ray-x/lsp_signature.nvim')
 end)
 
