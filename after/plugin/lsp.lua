@@ -3,12 +3,9 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'eslint',          -- Linter for JS/TS
   'lua_ls',          -- Lua LSP
   'rust_analyzer',   -- Rust LSP
-  'html',            -- HTML LSP ✅
-  'cssls',           -- CSS LSP ✅
-  'pyright',         -- Python LSP ✅
+  -- 'pyright',         -- Python LSP ✅
   'clangd',          -- C++ LSP ✅
 })
 
